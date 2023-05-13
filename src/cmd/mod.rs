@@ -404,12 +404,12 @@ impl<'w, 'pl> Command<'w, 'pl> {
                 .mount(
                     &workspace.cargo_home(),
                     &container_dirs::CARGO_HOME,
-                    MountKind::ReadOnly,
+                    MountKind::ReadWrite,
                 )
                 .mount(
                     &workspace.rustup_home(),
                     &container_dirs::RUSTUP_HOME,
-                    MountKind::ReadOnly,
+                    MountKind::ReadWrite,
                 )
                 .env("CARGO_HOME", container_dirs::CARGO_HOME.to_str().unwrap())
                 .env("RUSTUP_HOME", container_dirs::RUSTUP_HOME.to_str().unwrap());
