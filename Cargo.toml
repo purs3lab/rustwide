@@ -1,6 +1,6 @@
 [package]
 name = "rustwide"
-version = "0.15.1"
+version = "0.16.0"
 edition = "2018"
 build = "build.rs"
 
@@ -39,7 +39,7 @@ remove_dir_all = "0.7"
 base64 = "0.13.0"
 getrandom = { version = "0.2", features = ["std"] }
 thiserror = "1.0.20"
-git2 = "0.14.0"
+git2 = "0.17.0"
 
 [target.'cfg(unix)'.dependencies]
 nix = "0.25.0"
@@ -49,4 +49,5 @@ windows-sys = {version = "0.36.1", features = ["Win32_Foundation", "Win32_System
 
 [dev-dependencies]
 env_logger = "0.8"
+rand = "0.8.5"
 tiny_http = "0.8.0"
